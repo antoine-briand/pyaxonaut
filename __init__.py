@@ -1,1 +1,1 @@
-name = "axonaut_sdk"
+name = "pyaxonaut"

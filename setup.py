@@ -4,7 +4,7 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="axonaut_sdk",
+    name="pyaxonaut",
     version="0.0.1",
     author="AJ Innov",
     author_email="contact@ajinov.fr",
