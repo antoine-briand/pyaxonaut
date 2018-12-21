@@ -11,7 +11,7 @@ setuptools.setup(
     description="A non official API wrapper for Axonaut CRM",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/pypa/sampleproject",
+    url="https://github.com/antoine-briand/pyaxonaut",
     packages=setuptools.find_packages(),
     classifiers=[
         "Programming Language :: Python :: 3",
