@@ -1,4 +1,4 @@
-from models.quote_line import QuoteLine
+from pyaxonaut.models.quote_line import QuoteLine
 
 
 class Quote:

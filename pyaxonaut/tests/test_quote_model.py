@@ -2,7 +2,7 @@ import json
 import os
 import unittest
 
-from models.quote import Quote
+from pyaxonaut.models.quote import Quote
 
 
 class TestQuoteModel(unittest.TestCase):
