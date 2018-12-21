@@ -1,0 +1,17 @@
+{
+  "productId": 123456,
+  "productInternalId": null,
+  "productName": "ACME Product",
+  "productCode": null,
+  "title": "ACME Product",
+  "details": "<h1></h1>",
+  "quantity": "1.00000",
+  "unitPrice": "1200.00000",
+  "taxRate": "20.00",
+  "lineDiscountAmount": "0.00",
+  "lineDiscountAmountWithTax": "0.00",
+  "lineDiscountUnitIsPercent": true,
+  "taxAmount": 240,
+  "pretaxAmount": 1200,
+  "totalAmount": 1440
+}
