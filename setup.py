@@ -1,5 +1,4 @@
 import setuptools
-from pkg_resources import parse_requirements
 
 with open("README.md", "r") as fh:
     long_description = fh.read()
