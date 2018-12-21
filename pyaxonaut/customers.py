@@ -1,12 +1,12 @@
 import requests
 
-import constants
-from models.customer import Customer
+from pyaxonaut.constants import AXONAUT_API_CUSTOMERS_LIST, AXONAUT_API_BASE_URL, AXONAUT_API_CUSTOMER
+from pyaxonaut.models.customer import Customer
 
 
 class Customers:
-    CUSTOMERS_URL = f"{constants.AXONAUT_API_BASE_URL}/{constants.AXONAUT_API_CUSTOMERS_LIST}"
-    CUSTOMER_URL = f"{constants.AXONAUT_API_BASE_URL}/{constants.AXONAUT_API_CUSTOMER}"
+    CUSTOMERS_URL = f"{AXONAUT_API_BASE_URL}/{AXONAUT_API_CUSTOMERS_LIST}"
+    CUSTOMER_URL = f"{AXONAUT_API_BASE_URL}/{AXONAUT_API_CUSTOMER}"
 
     def __init__(self, api_key=None):
         self.api_key = api_key
