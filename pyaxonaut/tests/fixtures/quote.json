@@ -1,0 +1,38 @@
+{
+  "id": 12345,
+  "number": "123456789",
+  "title": "123456789 Devis ACME",
+  "date": "2018-09-27",
+  "sentDate": null,
+  "idUser": 1234,
+  "companyId": 123456,
+  "companyName": "ACME",
+  "globalDiscountAmount": null,
+  "globalDiscountAmountWithTax": null,
+  "globalDiscountUnitIsPercent": null,
+  "globalDiscountComments": null,
+  "preTaxAmount": 1200,
+  "taxAmount": 240,
+  "totalAmount": 1440,
+  "customerAnswer": 1,
+  "electronicSignatureDate": null,
+  "quotationLines": [
+    {
+      "productId": 123456,
+      "productInternalId": null,
+      "productName": "ACME Product",
+      "productCode": null,
+      "title": "ACME Product",
+      "details": "<h1></h1>",
+      "quantity": "1.00000",
+      "unitPrice": "1200.00000",
+      "taxRate": "20.00",
+      "lineDiscountAmount": "0.00",
+      "lineDiscountAmountWithTax": "0.00",
+      "lineDiscountUnitIsPercent": true,
+      "taxAmount": 240,
+      "pretaxAmount": 1200,
+      "totalAmount": 1440
+    }
+  ]
+}
