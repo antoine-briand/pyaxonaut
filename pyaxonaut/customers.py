@@ -15,7 +15,7 @@ class Customers:
         return list(map(Customer, self.request_customers_json()))
 
     def get_customer(self, company_id):
-        return list(map(Customer, self.request_customer_json(company_id=company_id)))
+        return Customer(self.request_customer_json(company_id=company_id))
 
     def request_customers_json(self):
         resp = requests.post(self.CUSTOMERS_URL, data={
@@ -28,4 +28,4 @@ class Customers:
             "accountApiKey": self.api_key,
             "companyId": company_id
         })
-        return resp.json().get('arrayCompanies')
+        return resp.json().get('arrayCompanies')[0]

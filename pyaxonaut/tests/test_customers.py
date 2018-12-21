@@ -53,6 +53,5 @@ class TestCustomers(unittest.TestCase):
         mock_resp = self._mock_response(json_data=self.json_customer)
         mock_post.return_value = mock_resp
 
-        response = self._customers.get_customer(company_id="987654")
-        self.assertTrue(len(response) > 0)
-        self.assertEqual(987654, response[0].company_id)
+        customer = self._customers.get_customer(company_id="987654")
+        self.assertEqual(987654, customer.company_id)
