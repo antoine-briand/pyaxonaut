@@ -1,0 +1,41 @@
+{
+  "status": "OK",
+  "arrayCompanies": [
+    {
+      "companyId": 987654,
+      "name": "ACME",
+      "lastEvent": null,
+      "nextEvent": null,
+      "comments": "",
+      "companyNatures": [],
+      "addressStreet": "",
+      "addressZipCode": "",
+      "addressTown": "",
+      "addressCountry": "",
+      "employees": [],
+      "customFields": "",
+      "nbOpportunities": 0,
+      "isProspect": true,
+      "isCustomer": false,
+      "isSupplier": false
+    },
+    {
+      "companyId": 987655,
+      "name": "EMCA",
+      "lastEvent": null,
+      "nextEvent": null,
+      "comments": "",
+      "companyNatures": [],
+      "addressStreet": "",
+      "addressZipCode": "",
+      "addressTown": "",
+      "addressCountry": "",
+      "employees": [],
+      "customFields": "",
+      "nbOpportunities": 0,
+      "isProspect": true,
+      "isCustomer": false,
+      "isSupplier": false
+    }
+  ]
+}
