@@ -3,7 +3,7 @@ import unittest
 from models.customer import Customer
 
 
-class TestCustomer(unittest.TestCase):
+class TestCustomerModel(unittest.TestCase):
 
     def test_get_customer_from_json(self):
         json_customer = {
@@ -29,3 +29,7 @@ class TestCustomer(unittest.TestCase):
         self.assertEqual(json_customer.get("isProspect"), customer.is_prospect)
         self.assertEqual(json_customer.get("isCustomer"), customer.is_customer)
         self.assertEqual(json_customer.get("isSupplier"), customer.is_supplier)
+
+
+if __name__ == '__main__':
+    unittest.main()
