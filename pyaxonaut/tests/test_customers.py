@@ -1,5 +1,6 @@
 import json
 import unittest
+import os
 from unittest.mock import Mock, patch
 
 from customers import Customers
@@ -9,9 +10,11 @@ class TestCustomers(unittest.TestCase):
 
     def setUp(self):
         self._customers = Customers()
-        with open("./fixtures/customers.json", mode="r") as json_customers_fixture:
+        with open(f"{os.path.dirname(os.path.realpath(__file__))}/fixtures/customers.json",
+                  mode="r") as json_customers_fixture:
             self.json_customers = json.load(json_customers_fixture)
-        with open("./fixtures/customer.json", mode="r") as json_customer_fixture:
+        with open(f"{os.path.dirname(os.path.realpath(__file__))}/fixtures/customer.json",
+                  mode="r") as json_customer_fixture:
             self.json_customer = json.load(json_customer_fixture)
 
     def _mock_response(
