@@ -11,6 +11,8 @@ class TestCustomers(unittest.TestCase):
         self._customers = Customers()
         with open("./fixtures/customers.json", mode="r") as json_customers_fixture:
             self.json_customers = json.load(json_customers_fixture)
+        with open("./fixtures/customer.json", mode="r") as json_customer_fixture:
+            self.json_customer = json.load(json_customer_fixture)
 
     def _mock_response(
             self,
@@ -42,6 +44,15 @@ class TestCustomers(unittest.TestCase):
         self.assertTrue(len(response) > 0)
         self.assertEqual(987654, response[0].company_id)
         self.assertEqual(987655, response[1].company_id)
+
+    @patch('customers.requests.post')
+    def test_get_customer_from_id(self, mock_post):
+        mock_resp = self._mock_response(json_data=self.json_customer)
+        mock_post.return_value = mock_resp
+
+        response = self._customers.get_customer(company_id="987654")
+        self.assertTrue(len(response) > 0)
+        self.assertEqual(987654, response[0].company_id)
 
 
 if __name__ == '__main__':
