@@ -1,6 +1,6 @@
 import unittest
 
-from models.customer import Customer
+from ..models.customer import Customer
 
 
 class TestCustomerModel(unittest.TestCase):
@@ -29,7 +29,3 @@ class TestCustomerModel(unittest.TestCase):
         self.assertEqual(json_customer.get("isProspect"), customer.is_prospect)
         self.assertEqual(json_customer.get("isCustomer"), customer.is_customer)
         self.assertEqual(json_customer.get("isSupplier"), customer.is_supplier)
-
-
-if __name__ == '__main__':
-    unittest.main()

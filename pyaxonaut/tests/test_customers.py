@@ -3,7 +3,7 @@ import unittest
 import os
 from unittest.mock import Mock, patch
 
-from customers import Customers
+from pyaxonaut import Customers
 
 
 class TestCustomers(unittest.TestCase):
@@ -38,7 +38,7 @@ class TestCustomers(unittest.TestCase):
             )
         return mock_resp
 
-    @patch('customers.requests.post')
+    @patch('pyaxonaut.customers.requests.post')
     def test_get_customers(self, mock_post):
         mock_resp = self._mock_response(json_data=self.json_customers)
         mock_post.return_value = mock_resp
@@ -48,7 +48,7 @@ class TestCustomers(unittest.TestCase):
         self.assertEqual(987654, response[0].company_id)
         self.assertEqual(987655, response[1].company_id)
 
-    @patch('customers.requests.post')
+    @patch('pyaxonaut.customers.requests.post')
     def test_get_customer_from_id(self, mock_post):
         mock_resp = self._mock_response(json_data=self.json_customer)
         mock_post.return_value = mock_resp
@@ -56,7 +56,3 @@ class TestCustomers(unittest.TestCase):
         response = self._customers.get_customer(company_id="987654")
         self.assertTrue(len(response) > 0)
         self.assertEqual(987654, response[0].company_id)
-
-
-if __name__ == '__main__':
-    unittest.main()
